@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[244],{9946:function(n,u,t){(window.__NEXT_P=window.__NEXT_P||[]).push(["/homestay",function(){return t(4602)}])},4602:function(n,u,t){"use strict";t.r(u);var _=t(5893);t(7294),u.default=()=>(0,_.jsx)("div",{children:"homestay"})}},function(n){n.O(0,[888,774,179],function(){return n(n.s=9946)}),_N_E=n.O()}]);
