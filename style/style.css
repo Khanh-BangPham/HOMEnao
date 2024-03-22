@@ -132,6 +132,7 @@ html,
 body {
     --heightHeader: 90px;
     --OldColor: #1A2324;
+    --mainColor: #d6cf00;   
 }
 @media (max-width: 991px) {
     html,
@@ -326,7 +327,7 @@ img {
     content: "";
     width: 50%;
     height: 1px;
-    background: #bea67c;
+    background: var(--mainColor);
     display: block;
     position: absolute;
     bottom: 1px;
@@ -372,7 +373,7 @@ img {
     -o-transition: 0.4s;
 }
 .btn:hover {
-    background-color: #bea67c;
+    background-color: var(--mainColor);
     transition: 0.4s;
     -webkit-transition: 0.4s;
     -moz-transition: 0.4s;
@@ -3213,7 +3214,7 @@ header .container-fluid .menu li a {
 }
 header .container-fluid .menu li a:hover,
 header .container-fluid .menu li a.active {
-    color: #000000;
+    color: #fff700;
     transition: 0.4s;
     -webkit-transition: 0.4s;
     -moz-transition: 0.4s;
@@ -3276,7 +3277,7 @@ header .right .lang__select a {
     margin: 6px 0px;
 }
 header .right .lang__select a:hover {
-    color: #bea67c;
+    color: var(--mainColor);
     transition: 0.4s;
     -webkit-transition: 0.4s;
     -moz-transition: 0.4s;
@@ -3471,7 +3472,7 @@ header .right .bottonnav.active span:nth-child(3) {
 }
 .menubox ul li a:hover,
 .menubox ul li a.active {
-    color: #bea67c;
+    color: var(--mainColor);
     transition: 0.4s;
     -webkit-transition: 0.4s;
     -moz-transition: 0.4s;
@@ -3638,7 +3639,7 @@ footer .container a {
     font-size: 42px;
     font-family: pb;
     line-height: normal;
-    color: #bea67c;
+    color: var(--mainColor);
     display: flex;
     align-items: center;
     width: 110px;
@@ -3647,7 +3648,7 @@ footer .container a {
     content: "";
     width: 43px;
     height: 2px;
-    background: #bea67c;
+    background: var(--mainColor);
     display: inline-block;
     margin-right: 15px;
 }
@@ -3671,7 +3672,7 @@ footer .container a {
 }
 .mainwrapper .sliders__control .container-fluid .paging .dotted ol li.is-selected,
 .mainwrapper .sliders__control .container-fluid .paging .dotted ol li:hover {
-    background-color: #bea67c;
+    background-color: var(--mainColor);
     opacity: 1;
     transition: 0.4s;
     -webkit-transition: 0.4s;
@@ -3718,7 +3719,7 @@ footer .container a {
     border-right: 0px;
 }
 .mainwrapper .sliders__control .container-fluid .control__btn:hover {
-    background-color: #bea67c;
+    background-color: var(--mainColor);
     transition: 0.4s;
     -webkit-transition: 0.4s;
     -moz-transition: 0.4s;
@@ -3800,7 +3801,7 @@ footer .container a {
     content: "";
     width: 38px;
     height: 3px;
-    background: #bea67c;
+    background: var(--mainColor);
     display: flex;
     position: absolute;
     margin-bottom: -15px;
@@ -3934,7 +3935,7 @@ footer .container a {
     content: "";
     width: 25px;
     height: 2px;
-    background: #bea67c;
+    background: var(--mainColor);
     display: block;
     margin: 20px auto;
 }
@@ -4091,7 +4092,7 @@ footer .container a {
 }
 .mainwrapper .news .container .news__list .new__textbox-title:before {
     content: "";
-    background: #bea67c;
+    background: var(--mainColor);
     width: var(--pd-textbx);
     height: 3px;
     margin-top: 25px;
@@ -4099,7 +4100,7 @@ footer .container a {
     display: block;
 }
 .mainwrapper .news .container .news__list .new__textbox-title:hover {
-    color: #bea67c;
+    color: var(--mainColor);
     opacity: 1;
 }
 .mainwrapper .news .container .news__list .new__textbox p {
@@ -4406,7 +4407,7 @@ footer .container a {
     }
 }
 /*# sourceMappingURL=style.min.css.map */
-.thumb{
+.mainwrapper .slider .thumb{
     width: 100% !important;
 }
 .carousel{
@@ -4424,7 +4425,7 @@ footer .container a {
 .mainwrapper .schedule .container {
     position: relative;
 }
-.mainwrapper .schedule .container .infinite-scroll-table{
+.infinite-scroll-table{
     max-width: 100%;
     max-height: 400px;
     overflow-y: auto;
@@ -4432,51 +4433,59 @@ footer .container a {
     border-collapse: collapse;
     border-spacing: 0;
 }
-.mainwrapper .schedule .container .table {
+.table {
     margin-top: 30px;
     display: table;
     table-layout: fixed;
     max-width: 100%;
     font-size: 16px !important;
 }
-.mainwrapper .schedule .container .handle{
+.handle{
     margin-top: 20px;
     
 }
-.mainwrapper .schedule .container .handle div{
+.handle div{
    display: flex;
    align-items: center;
    justify-content: space-between;
 }
-.mainwrapper .schedule .container .handle span::before {
+.handle span::before {
     content: "";
     min-width: 70px;
     min-height: 20px;
-    background: #bea67c;
+    background: var(--mainColor);
     display: inline-block;
     margin-right: 5px;
 }
-.mainwrapper .schedule .container .table thead {
-    border: 1px #bea67c solid;
+.table thead {
+    border: 1px var(--mainColor) solid;
 }
 
-.mainwrapper .schedule .container .table thead tr{
-    border: 1px #bea67c solid;
+.room__detail .table{
+    width: 100%;
+}
+.room__detail .total-price{
+    margin-top: 20px;
+    margin-bottom: 60px;
+    text-align: left;
+}
+.table thead tr{
+    border: 1px var(--mainColor) solid;
 }
 
-.mainwrapper .schedule .container .table thead tr th{
-    border: 1px #bea67c solid;
+.table thead tr th{
+    border: 1px var(--mainColor) solid;
     vertical-align: bottom;
     padding: 0.5rem;
 }
 
-.mainwrapper .schedule .container .table tbody {
+.table tbody {
     font-size: 12px;
     text-align: center;
 }
 
-.mainwrapper .schedule .container .table tbody tr td{
-    border: 1px #bea67c solid;
+.table tbody tr td{
+    border: 1px var(--mainColor) solid;
     vertical-align: bottom;
     padding: 0.5rem;
     position: relative;
@@ -4485,9 +4494,9 @@ footer .container a {
     cursor: pointer;
 }
 
-.mainwrapper .schedule .container .table tbody tr td .available-item{
+.table tbody tr td .available-item{
     content: '';
-    background: #bea67c;
+    background: var(--mainColor);
     width: auto;
     min-height: 20px;
     display: block;
@@ -4498,25 +4507,24 @@ footer .container a {
     top: -30vh;
     bottom: -30vh;
 }
-.homestay {
-    padding-top: calc(var(--heightHeader));
+.homestay, .room {
+    padding-top: calc(var(--heightHeader) + 60px);
 }
-.homestay .homestay__textbox{
-    margin: 60px 0;
+.homestay .homestay__textbox, .room, .room__textbox{
     text-align: center;
 }
-.homestay .homestay__textbox .breadcrumb{
+.homestay .homestay__textbox .breadcrumb, .room .room__textbox .breadcrumb{
     margin: 20px 0;
 }
-.homestay .homestay__textbox .breadcrumb .bt-option a{
+.homestay .homestay__textbox .breadcrumb .bt-option a, .room .room__textbox .breadcrumb .bt-option a{
     position: relative;
-    margin: 0 40px;
+    margin-right: 40px;
     text-decoration: none;
     font-weight: bold;
     color: #000;
     font-size: 18px;
 }
-.homestay .homestay__textbox .breadcrumb .bt-option a::after{
+.homestay .homestay__textbox .breadcrumb .bt-option a::after, .room .room__textbox .breadcrumb .bt-option a::after{
     position: absolute;
     right: -25px;
     top: 1px;
@@ -4524,4 +4532,99 @@ footer .container a {
     font-size: 18px;
     font-family: "FontAwesome";
     color: #aaaab3;
+}
+
+/* homestay */
+.homestay{
+
+}
+.homestay .homestay__textbox{
+
+}
+.homestay .homestay__lists{
+
+}
+.homestay .homestay__lists .room-item{
+    cursor: pointer;
+}
+.homestay .homestay__lists .room-item .ri-text, .room .room__detail .ri-text{
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+.homestay .homestay__lists .room-item .ri-text h4, .room .room__detail .ri-text h4{
+    font-size: 30px;
+    color: #000;
+    font-weight: normal;
+    font-family: pb;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+.homestay .homestay__lists .room-item .ri-text h3, .room .room__detail .ri-text h3{
+    font-size: 25px;
+    color: var(--mainColor);
+    font-weight: bold;
+    font-family: pb;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+.homestay .homestay__lists .room-item .ri-text h3 span{
+    color: #000;
+    font-size: 18px;
+}
+.homestay .homestay__lists .room-item .ri-text a{
+    font-size: 15px;
+    color: #000;
+    font-family: pb;
+    letter-spacing: 2px;
+}
+.pd-20{
+    padding: 20px;
+}
+.room .room__detail .ri-text h3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+}
+.room .room__detail .ri-text h3 span{
+    color: #000;
+    font-size: 15px;
+}
+
+.room .room__detail .room__detail-form{
+    display: flex;
+    flex-direction: column;
+    padding: 0 5rem;
+}
+.room .room__detail .room__detail-form h4{
+    font-size: 20px;
+    color: #000;
+    font-weight: normal;
+    font-family: pb;
+    margin-bottom: 30px;
+}
+.room .room__detail .room__detail-form label{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 18px;
+}
+.room .room__detail .room__detail-form label input{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px #000 solid;
+    font-size: 16px;
+}
+.room .room__detail .room__detail-form label input:focus-visible{
+    outline: none !important;
+}
+.room .room__detail .room__detail-form label textarea:focus-visible{
+    outline: none !important;
+}
+.room .room__detail .room__detail-form label textarea{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    height: 100px;
 }

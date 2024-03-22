@@ -36,13 +36,13 @@ const Header: NextComponentType = () => {
                         <h1 className="hidden">Hôme nào</h1>
                     </div>
                     <ul className="menu">
-                        <li><Link className="active" href="#slider">Home</Link></li>
-                        <li><Link href="#products">Homestay</Link></li>
-                        <li><Link href="#About">Liên hệ</Link></li>
+                        <li><Link className="active" href="./">Home</Link></li>
+                        <li><Link href="/homestay">Homestay</Link></li>
+                        <li><Link href="/contact">Liên hệ</Link></li>
                     </ul>
                     <div className="right">
                         <div className="buynow">
-                            <Link className="buynow__btn btn" href="#">  BOOK NOW </Link>
+                            <Link className="buynow__btn btn" href="/homestay">  BOOK NOW </Link>
                         </div>
                         <div className="bottonnav">
                             <span />
