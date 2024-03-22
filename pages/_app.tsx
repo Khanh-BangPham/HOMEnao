@@ -6,11 +6,9 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../assets/fonts/stylesheet.css'
 import 'locomotive-scroll/dist/locomotive-scroll.css';
 import { useEffect, useRef } from 'react';
-import { useRouter } from 'next/router';
 
 export default function App({ Component, pageProps }: AppProps) {
   const containerRef = useRef(null)
-  const { asPath } = useRouter();
 
 useEffect(() => {
   let locomotive: any;
@@ -32,7 +30,7 @@ useEffect(() => {
         smooth: true,
       })
 
-
+      new ResizeObserver(() => locomotive.update()).observe(dataScrollContainer as Element)
     } catch (error) {}
   })()
 
@@ -42,7 +40,7 @@ useEffect(() => {
 }, [])
   return (
       <div data-scroll-container ref={containerRef}>
-        <Component {...pageProps} />;
+        <Component {...pageProps} />
       </div>
   )
 }
