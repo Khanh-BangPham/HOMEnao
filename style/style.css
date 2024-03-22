@@ -4507,16 +4507,19 @@ footer .container a {
     top: -30vh;
     bottom: -30vh;
 }
-.homestay, .room {
+.contact{
+    min-height: 100vh;
+}
+.homestay, .room, .contact{
     padding-top: calc(var(--heightHeader) + 60px);
 }
-.homestay .homestay__textbox, .room, .room__textbox{
+.homestay .homestay__textbox, .room .room__textbox, .contact .contact__textbox{
     text-align: center;
 }
-.homestay .homestay__textbox .breadcrumb, .room .room__textbox .breadcrumb{
+.homestay .homestay__textbox .breadcrumb, .room .room__textbox .breadcrumb, .contact .contact__textbox .breadcrumb{
     margin: 20px 0;
 }
-.homestay .homestay__textbox .breadcrumb .bt-option a, .room .room__textbox .breadcrumb .bt-option a{
+.homestay .homestay__textbox .breadcrumb .bt-option a, .room .room__textbox .breadcrumb .bt-option a, .contact .contact__textbox .breadcrumb .bt-option a{
     position: relative;
     margin-right: 40px;
     text-decoration: none;
@@ -4524,7 +4527,8 @@ footer .container a {
     color: #000;
     font-size: 18px;
 }
-.homestay .homestay__textbox .breadcrumb .bt-option a::after, .room .room__textbox .breadcrumb .bt-option a::after{
+.homestay .homestay__textbox .breadcrumb .bt-option a::after, .room .room__textbox .breadcrumb .bt-option a::after,
+.contact .contact__textbox .breadcrumb .bt-option a::after{
     position: absolute;
     right: -25px;
     top: 1px;
@@ -4533,7 +4537,15 @@ footer .container a {
     font-family: "FontAwesome";
     color: #aaaab3;
 }
+.contact__detail .contact__textbox{
+    display: flex;
+    flex-direction: column;
 
+}
+.contact__detail .contact__textbox p b{
+    font-weight: bold;
+
+}
 /* homestay */
 .homestay{
 
